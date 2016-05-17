@@ -1,20 +1,20 @@
-<div class="container center-block">
+<div>
 
   <h1>Shorten your URL!</h1>
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+  <div>
+    <div>
       <p>Paste in your long URL and we will give you a short one you can use! </p>
     </div>
   </div>
 
-  <div class="row center-block">
-    <div class="col-md-6 col-md-offset-3">
+  <div>
+    <div>
       <%= form_for(@new_url, url: shortener_path) do |f|%>
-        <div class="form-group">
+        <div>
           <%= f.hidden_field :small_url, :value => UrlShortener.new.url %>
-          <%= f.text_field (:original_url), class: "form-control" %>
+          <%= f.text_field (:original_url)%>
         </div>
-        <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+        <%= button_tag(type: 'submit') do %>
         Shorten your URL!
         <% end %>
       <% end %>
